@@ -62,5 +62,14 @@ document.addEventListener('DOMContentLoaded', () => {
     current.forEach(index => {
       sqaures[currentPosition = index].classList.remove('tetromino');
     });
+  };
+
+  // Make tetromino move down every second
+  timerId = setInterval(niveDown, 1000);
+
+  // Move down function
+  functino moveDown() {
+      undraw{};
+      currentPosition += width;
   }
 });
