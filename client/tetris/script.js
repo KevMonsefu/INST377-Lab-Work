@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const ScoreDisplay = document.querySelector('#score');
   const StartBtn = document.querySelector('#start-button');
   const width = 10;
+  console.log(squares)
 
   // Tetrominoes
   const lTetromino = [
