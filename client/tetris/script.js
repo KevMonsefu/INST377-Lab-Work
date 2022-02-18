@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
   timerId = setInterval(niveDown, 1000);
 
   // Move down function
-  functino moveDown() {
+  function moveDown() {
       undraw{};
       currentPosition += width;
       draw();
