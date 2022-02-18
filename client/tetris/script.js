@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const ScoreDisplay = document.querySelector('#score');
   const StartBtn = document.querySelector('#start-button');
   const width = 10;
-  console.log(squares)
 
   // Tetrominoes
   const lTetromino = [
@@ -50,6 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Random select tetromino
   let random = Math.floor(Math.random() * theTetrominoes.length);
   let current = theTetrominoes[random][currentRotation];
+  console.log(theTetrominoes)
 
   // 1st tetromino rotation
   function draw() {
