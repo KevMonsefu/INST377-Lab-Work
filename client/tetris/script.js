@@ -69,8 +69,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Move down function
   function moveDown() {
-      undraw{};
-      currentPosition += width;
-      draw();
+    undraw();
+    currentPosition += width;
+    draw();
   }
 });
