@@ -47,20 +47,20 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentRotation = 0
 
   // Random select tetromino
-  let random = Math.floor(Math.random()*theTetrominoes.length)
+  let random = Math.floor(Math.random() * theTetrominoes.length)
   let current = theTetrominoes[random][0]
 
   // 1st tetromino rotation
   function draw() {
     current.forEach(index => {
-      squares[currentPosition = index].classList.add('tetromino');
+      squares[currentPosition = index].classList.add('tetromino')
     })
-  };
+  }
 
   // Undraw Tetromino
   function undraw() {
     current.forEach(index => {
-      squares[currentPosition = index].classList.remove('tetromino');
+      squares[currentPosition = index].classList.remove('tetromino')
     })
   }
 
