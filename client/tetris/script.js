@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const theTetrominoes = [lTetromino, zTetromino, tTetromino, oTetromino, iTetromino]
 
-  let currentPosition = 4
+  let currentPosition = 10
   let currentRotation = 0
 
   // Random select tetromino
