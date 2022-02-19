@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Make tetromino move down every second
-  timerId = setInterval(moveDown, 10000);
+  timerId = setInterval(moveDown, 1000);
 
   // Move down function
   function moveDown() {
