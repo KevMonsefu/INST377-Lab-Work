@@ -87,4 +87,15 @@ document.addEventListener('DOMContentLoaded', () => {
       draw()
     }
   }
+  // move tetramino left
+  function moveleft() {
+    undraw()
+    const isAtLeftEdge = current.some(index => (currentPosition + index) % width === 0)
+
+    if(!isAtLeftEdge) currentPosition -=1
+
+    if(current.some(index => squares[currentPosition + index].classList.contains('taken'))) {
+      currentPositino +=1
+    }
+  }
 });
