@@ -96,10 +96,11 @@ document.addEventListener('DOMContentLoaded', () => {
       current.forEach((index) => squares[currentPosition + index].classList.add('taken'));
       // Start new tetramino
       random = nextRandom
-      random = Math.floor(Math.random() * theTetrominoes.length);
+      nextRandom = Math.floor(Math.random() * theTetrominoes.length);
       current = theTetrominoes[random][currentRotation];
       currentPosition = 4;
       draw();
+      displayShape()
     }
   }
   // move tetramino left
@@ -155,9 +156,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // display shape in mini grid
   function displayShape() {
-      displaySquares.forEach(square => {
-          square.classList.remove('tetromino')
-      })
-      upNextTetraoinoes[nextRandom]
+    displaySquares.forEach(square => {
+      square.classList.remove('tetromino')
+    })
+    upNextTetraoinoes[nextRandom].forEach( index => {
+      displaySquares[displayIndex + index].classList.add('tetromino')
+    })
   }
 });
