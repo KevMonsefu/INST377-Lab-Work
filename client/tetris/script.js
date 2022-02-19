@@ -65,16 +65,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Make tetromino move down every second
-  timerId = setInterval(moveDown, 1000);
-
   // Move down function
   function moveDown() {
     undraw();
     currentPosition += width;
     draw();
   }
-
+  // Make tetromino move down every second
+  timerId = setInterval(moveDown, 1000);
   function freeze() {
     if (current.some((index) => squares[currentPosition + index + width].classList.contains('taken'))) {
       current.forEach((index) => squares[currentPosition + index].classList.add('taken'))
