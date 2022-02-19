@@ -97,5 +97,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if(current.some(index => squares[currentPosition + index].classList.contains('taken'))) {
       currentPositino +=1
     }
+    draw()
   }
 });
