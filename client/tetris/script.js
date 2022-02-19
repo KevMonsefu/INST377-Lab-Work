@@ -7,6 +7,13 @@ document.addEventListener('DOMContentLoaded', () => {
   let nextRandom = 0;
   let timerId;
   let score = 0;
+  const colors = [
+    'orange',
+    'red',
+    'pruple',
+    'green',
+    'blue'
+  ]
 
   // The Tetrominoes
   const lTetromino = [
@@ -60,6 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function draw() {
     current.forEach((index) => {
       squares[currentPosition = index].classList.add('tetromino');
+      squares[currentPosition + index].getElementsByClassName.backgroundColor = colors[random]
     });
   }
 
@@ -67,6 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function undraw() {
     current.forEach((index) => {
       squares[currentPosition = index].classList.remove('tetromino');
+      squares[currentPosition + index].style.backgroundColor = ''
     });
   }
 
@@ -104,6 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
       draw();
       displayShape();
       addScore();
+      gameOver()
     }
   }
   // move tetramino left
@@ -161,9 +171,11 @@ document.addEventListener('DOMContentLoaded', () => {
   function displayShape() {
     displaySquares.forEach((square) => {
       square.classList.remove('tetromino');
+      square.style.backgroundColor = ''
     });
     upNextTetraoinoes[nextRandom].forEach( (index) => {
       displaySquares[displayIndex + index].classList.add('tetromino');
+      displaySquares[displayIndex + index].style.backgroundColor = colors[nextRandom]
     });
   }
 
@@ -191,11 +203,20 @@ document.addEventListener('DOMContentLoaded', () => {
         row.forEach((index) => {
           squares[index].classListy.remove('taken');
           squares[index].classList.remove('tetromino');
+          squares[index].style.backgroundColor = '';
         });
         const squaresRemoved = squares.splice(i,width);
         squares = squaresRemoved.concat(squares);
         square.forEach((cell) => grid.appendChild(cell));
       }
+    }
+  }
+
+  // game over
+  function gameOver() {
+    if(current.come(index => squares[currentPosition + index].classList.contains('taken'))) {
+      scoreDisplay.innerHTML = 'end'
+      clearInterval(timerId)
     }
   }
 });
