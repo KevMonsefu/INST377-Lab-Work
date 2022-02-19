@@ -17,38 +17,38 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // The Tetrominoes IDK
   const lTetromino = [
-    [1, width+1, width*2+1, 2],
-    [width, width+1, width+2, width*2+2],
-    [1, width+1, width*2+1, width*2],
-    [width, width*2, width*2+1, width*2+2]
+    [1, width + 1, width * 2 + 1, 2],
+    [width, width + 1, width + 2, width * 2 + 2],
+    [1, width + 1, width * 2 + 1, width * 2],
+    [width, width * 2, width * 2 + 1, width * 2 + 2]
   ];
   
   const zTetromino = [
-    [0,width,width+1,width*2+1],
-    [width+1, width+2,width*2,width*2+1],
-    [0,width,width+1,width*2+1],
-    [width+1, width+2,width*2,width*2+1]
+    [0, width, width + 1, width * 2 + 1],
+    [width + 1, width + 2, width * 2, width * 2 + 1],
+    [0, width, width + 1, width * 2 + 1],
+    [width + 1, width + 2, width * 2, width * 2 + 1]
   ];
   
   const tTetromino = [
-    [1,width,width+1,width+2],
-    [1,width+1,width+2,width*2+1],
-    [width,width+1,width+2,width*2+1],
-    [1,width,width+1,width*2+1]
+    [1, width, width + 1, width + 2],
+    [1, width + 1, width + 2, width * 2 + 1],
+    [width, width + 1, width + 2, width * 2 + 1],
+    [1, width, width + 1, width * 2 + 1]
   ];
   
   const oTetromino = [
-    [0,1,width,width+1],
-    [0,1,width,width+1],
-    [0,1,width,width+1],
-    [0,1,width,width+1]
+    [0, 1, width, width + 1],
+    [0, 1, width, width + 1],
+    [0, 1, width, width + 1],
+    [0, 1, width, width + 1]
   ];
   
   const iTetromino = [
-    [1,width+1,width*2+1,width*3+1],
-    [width,width+1,width+2,width+3],
-    [1,width+1,width*2+1,width*3+1],
-    [width,width+1,width+2,width+3]
+    [1, width + 1, width * 2 + 1, width * 3 + 1],
+    [width, width + 1, width + 2, width + 3],
+    [1, width + 1, width * 2 + 1, width * 3 + 1],
+    [width, width + 1, width + 2, width + 3]
   ];
   
   const theTetrominoes = [lTetromino, zTetromino, tTetromino, oTetromino, iTetromino];
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log(theTetrominoes[0][0]);
   
   // Random select tetromino
-  let random = Math.floor(Math.random()*theTetrominoes.length);
+  let random = Math.floor(Math.random() * theTetrominoes.length);
   let current = theTetrominoes[random][currentRotation];
   console.log(currentPosition);
   // 1st tetromino rotation
@@ -121,9 +121,9 @@ document.addEventListener('DOMContentLoaded', () => {
   function moveleft() {
     undraw();
     const isAtLeftEdge = current.some(index => (currentPosition + index) % width === 0);
-    if (!isAtLeftEdge) currentPosition -=1;
+    if (!isAtLeftEdge) currentPosition -= 1;
     if (current.some(index => squares[currentPosition + index].classList.contains('taken'))) {
-      currentPosition +=1;
+      currentPosition += 1;
     }
     draw();
   }
@@ -131,10 +131,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // move tetromino right 
   function moveRight() {
     undraw();
-    const isAtRightEdge = current.some(index => (currentPosition + index) % width === width -1);
-    if (!isAtRightEdge) currentPosition +=1;
+    const isAtRightEdge = current.some(index => (currentPosition + index) % width === width - 1);
+    if (!isAtRightEdge) currentPosition += 1;
     if (current.some(index => squares[currentPosition + index].classList.contains('taken'))) {
-      currentPosition -=1;
+      currentPosition -= 1;
     }
     draw();
   }
@@ -149,25 +149,21 @@ document.addEventListener('DOMContentLoaded', () => {
     current = theTetrominoes[random][currentRotation];
     draw();
   }
-  
-  //
-  //
-   
+
   // show next tetramino
   const displaySquares = document.querySelectorAll('.mini-grid div');
   const displayWidth = 4;
   const displayIndex = 0;
-  
-  //
+
   // Next tetramino no rotate
   const upNextTetrominoes = [
-    [1, displayWidth+1, displayWidth*2+1, 2],
-    [0, displayWidth, displayWidth+1, displayWidth*2+1],
-    [1, displayWidth, displayWidth+1, displayWidth+2],
-    [0, 1, displayWidth, displayWidth+1],
-    [1, displayWidth+1, displayWidth*2+1, displayWidth*3+1]
+    [1, displayWidth + 1, displayWidth * 2 + 1, 2],
+    [0, displayWidth, displayWidth + 1, displayWidth * 2 + 1],
+    [1, displayWidth, displayWidth + 1, displayWidth + 2],
+    [0, 1, displayWidth, displayWidth + 1],
+    [1, displayWidth + 1, displayWidth * 2 + 1, displayWidth * 3 + 1]
   ];
-  
+
   // display shape in mini grid idkidk
   function displayShape() {
     //
@@ -180,7 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
       displaySquares[displayIndex + index].style.backgroundColor = colors[nextRandom];
     });
   }
-  
+
   // add function to button
   startBtn.addEventListener('click', () => {
     if (timerId) {
@@ -189,25 +185,25 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       draw();
       timerId = setInterval(moveDown, 1000);
-      nextRandom = Math.floor(Math.random()*theTetrominoes.length);
+      nextRandom = Math.floor(Math.random() * theTetrominoes.length);
       displayShape();
     }
   });
   
-  // add score idkidk
+  // add score 
   function addScore() {
-    for (let i = 0; i< 199; i += width) {
-      const row = [i, i+1, i+2, i+3, i+4, i+5, i+6, i+7, i+8, i+9];
+    for (let i = 0; i < 199; i += width) {
+      const row = [i, i + 1, i + 2, i + 3, i + 4, i + 5, i + 6, i + 7, i + 8, i + 9];
   
       if(row.every(index => squares[index].classList.contains('taken'))) {
-        score +=10;
+        score += 10;
         scoreDisplay.innerHTML = score;
         row.forEach(index => {
           squares[index].classList.remove('taken');
           squares[index].classList.remove('tetromino');
           squares[index].style.backgroundColor = '';
         });
-        const squaresRemoved = squares.splice(i,width);
+        const squaresRemoved = squares.splice(i, width);
         squares = squaresRemoved.concat(squares);
         squares.forEach(cell => grid.appendChild(cell));
       }
