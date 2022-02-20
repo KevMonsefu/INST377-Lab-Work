@@ -70,6 +70,8 @@
   }
   .first-item {
     order: 1;
+    display: block;
+    animation: fadeVisibility 0.5s;
   }
   
   .last-item {
