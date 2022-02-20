@@ -3,11 +3,11 @@ const slides = document.getElementsByClassName('photo-grid-item');
 const totalSlides = slides.length;
 
 document.getElementById('carousel__button--next').addEventListener("click", function() {
-    moveToNextSlide();
-  });
+  moveToNextSlide();
+});
 document.getElementById('carousel__button--prev').addEventListener("click", function() {
-    moveToPrevSlide();
-  });
+  moveToPrevSlide();
+});
 
 function updateSlidePosition() {
   for (let slide of slides) {
