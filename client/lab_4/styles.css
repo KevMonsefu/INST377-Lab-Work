@@ -64,6 +64,9 @@
     flex-wrap: wrap;
     flex-direction: row; 
     align-items: center;
+    overflow: hidden;
+    max-width: 600px;
+    position: relative;
   }
   
   .photo-grid-item {
