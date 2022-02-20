@@ -50,11 +50,13 @@
     align-items: center;
   }
   .photo-grid-container {
-    overflow: hidden;
-    max-width: 600px;
-    position: relative;
+    display: flex;
+    justify-content: center;
   }
-  
+  .photo-grid .photo-grid-item,
+.photo-grid  .photo-grid--hidden {
+  display: none;
+}
   .photo-grid {
     width: 900px;
     display: flex;
