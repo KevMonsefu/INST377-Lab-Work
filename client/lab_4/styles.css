@@ -54,7 +54,7 @@
     justify-content: center;
   }
   .photo-grid .photo-grid-item,
-.photo-grid  .photo-grid--hidden {
+.photo-grid  .photo-grid-item--hidden {
   display: none;
 }
   .photo-grid {
@@ -71,7 +71,7 @@
     width: 300px;
     height: 300px;
   }
-  .photo-grid .photo-grid--visible {
+  .photo-grid .photo-grid-item--visible {
     display: block;
     animation: fadeVisibility 0.5s;
   }
@@ -116,3 +116,11 @@
   .photo-grid-container .carousel__actions button#carousel__button--next {
     margin-right: 20px;
   }
+  .photo-grid .carousel__actions {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
