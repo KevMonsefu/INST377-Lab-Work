@@ -76,9 +76,6 @@
     animation: fadeVisibility 0.5s;
   }
   
-  .last-item {
-    order: -1;
-  }
   .social,
 .subscribe {
   align-self: flex-end;
