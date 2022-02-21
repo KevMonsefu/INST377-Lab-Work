@@ -73,14 +73,9 @@
     border: 1px solid #fff;
     width: 300px;
     height: 300px;
-    align-items: center;
 
   }
-  .photo-grid .photo-grid-item img {
-    width: 200%;
-    max-width: 600px;
-    height: 100%;
-  }
+
   .photo-grid .photo-grid-item--visible {
     display: block;
     animation: fadeVisibility 0.5s;
