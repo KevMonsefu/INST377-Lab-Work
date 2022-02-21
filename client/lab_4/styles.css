@@ -103,10 +103,7 @@
 }
 .photo-grid-container .carousel__actions button {
     display: block;
-    border-width: 0 10px;
-    border-radius: 0;
-    font-size: 18px;
-    margin: auto 15px;
+    border-radius: 6px;
 }
 .photo-grid-container .carousel__actions button#carousel__button--prev {
     margin-left: 20px;
