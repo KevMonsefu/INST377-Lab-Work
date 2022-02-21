@@ -121,7 +121,7 @@
   .photo-grid .carousel__actions {
   display: flex;
   width: 100%;
-  justify-content: space-between;
+  justify-content: center;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
