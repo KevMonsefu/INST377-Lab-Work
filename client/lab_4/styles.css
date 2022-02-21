@@ -76,6 +76,11 @@
     align-items: center;
 
   }
+  .photo-grid .photo-grid-item img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+  }
   .photo-grid .photo-grid-item--visible {
     display: block;
     animation: fadeVisibility 0.5s;
@@ -121,6 +126,7 @@
   .photo-grid .carousel__actions {
   display: flex;
   width: 100%;
+  justify-content: space-between;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
