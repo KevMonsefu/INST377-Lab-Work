@@ -65,13 +65,13 @@
     flex-direction: row; 
     align-items: center;
     overflow: hidden;
-    max-width: 600px;
+    max-width: 500px;
     position: relative;
   }
   
   .photo-grid-item {
     border: 1px solid #fff;
-    width: 500px;
+    width: 300px;
     height: 300px;
     align-items: center;
 
