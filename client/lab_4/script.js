@@ -1,11 +1,11 @@
 let slidePosition = 0;
-const slides = document.querySelectorAll('photo-grid-item');
+const slides = document.querySelectorAll('.photo-grid-item');
 const totalSlides = slides.length;
 
-document.querySelector('carousel__button--next').addEventListener("click", function() {
+document.getElementById('carousel__button--next').addEventListener("click", function() {
   moveToNextSlide();
 });
-document.querySelector('carousel__button--prev').addEventListener("click", function() {
+document.getElementById('carousel__button--prev').addEventListener("click", function() {
   moveToPrevSlide();
 });
 
