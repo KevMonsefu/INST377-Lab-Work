@@ -77,7 +77,7 @@
   }
 
   .photo-grid .photo-grid-item--visible {
-    display: block;
+    display: flex;
     animation: fadeVisibility 0.5s;
   }
   
