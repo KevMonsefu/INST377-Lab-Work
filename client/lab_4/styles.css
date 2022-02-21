@@ -104,6 +104,8 @@
 .photo-grid-container .carousel__actions button {
     display: block;
     border-radius: 6px;
+    border-radius: 50px;
+
 }
 .photo-grid-container .carousel__actions button#carousel__button--prev {
     margin-left: 20px;
