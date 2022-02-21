@@ -61,8 +61,7 @@
     width: 700px;
     display: flex;
     justify-content: center;
-    flex-wrap: nowrap;
-    flex-direction: row; 
+    flex-wrap: wrap;
     align-items: center;
     overflow: hidden;
     position: relative;
