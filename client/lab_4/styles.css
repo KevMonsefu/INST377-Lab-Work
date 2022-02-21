@@ -72,7 +72,7 @@
   .photo-grid-item {
     border: 1px solid #fff;
     width: 300px;
-    height: 300px;
+    height: 400px;
   }
   .photo-grid .photo-grid-item--visible {
     display: block;
