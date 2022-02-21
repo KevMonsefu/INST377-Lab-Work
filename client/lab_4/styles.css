@@ -106,11 +106,10 @@
     border: solid white;
     border-width: 0 10px;
     border-radius: 0;
-    background: green;
+    background: grey;
     color: white;
     font-size: 18px;
-    margin: -60px auto 15px;
-    padding: 15px;
+    margin: auto 15px;
 }
 .photo-grid-container .carousel__actions button#carousel__button--prev {
     margin-left: 20px;
