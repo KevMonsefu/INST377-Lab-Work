@@ -103,11 +103,8 @@
 }
 .photo-grid-container .carousel__actions button {
     display: block;
-    border: solid white;
     border-width: 0 10px;
     border-radius: 0;
-    background: grey;
-    color: white;
     font-size: 18px;
     margin: auto 15px;
 }
