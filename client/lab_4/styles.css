@@ -79,7 +79,7 @@
   .photo-grid .photo-grid-item img {
     width: 200%;
     max-width: 600px;
-    height: auto;
+    height: 100%;
   }
   .photo-grid .photo-grid-item--visible {
     display: block;
