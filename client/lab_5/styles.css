@@ -43,10 +43,11 @@ body {
   padding: 15px;
 }
 .form-row {
-  
+  display: flex;
+
   flex-direction: column;
   align-items: flex-start; 
-  padding: 70px;
+  padding: 30px;
 }
 .form-row input[type='text'] {
   width: 120px;
