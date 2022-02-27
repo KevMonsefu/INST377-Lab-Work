@@ -31,5 +31,5 @@ body {
   background-color: rgba(0,139, 139,0.8);
   padding: 60px;
   margin: 0;
-  border: 20px darkslategray;
+  border: 20px solid darkslategray;
 }
