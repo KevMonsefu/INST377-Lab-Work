@@ -27,7 +27,7 @@ body {
 }
 .title{
   width: 100%;
-  display: inline-block;
+  display: inline-flex;
   background-color: rgba(0,139, 139,0.8);
   padding: 60px;
   margin: 0;
