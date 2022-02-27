@@ -24,6 +24,7 @@ body {
 .container {
   max-width: 960px;
   margin-top: 25px;
+  background-color: yellow;
 }
 .title{
   width: 100%;
