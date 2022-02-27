@@ -26,10 +26,10 @@ body {
   margin-top: 25px;
 }
 .title{
-  width: 50%;
+  width: 100%;
   display: inline-flex;
   background-color: rgba(0,139, 139,0.8);
-  padding: 60px;
+  padding: 40px;
   margin: 0;
   border: 30px solid darkslategray;
 }
