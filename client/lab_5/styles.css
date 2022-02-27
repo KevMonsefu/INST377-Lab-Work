@@ -46,6 +46,5 @@ body {
 }
 .form-row {
   flex-direction: row;
-  align-items: flex-start; 
   margin-bottom: 20px;
 }
