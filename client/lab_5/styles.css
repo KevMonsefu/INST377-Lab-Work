@@ -25,3 +25,10 @@ body {
   max-width: 960px;
   margin-top: 25px;
 }
+.title{
+  width: 100%;
+  display: inline-block;
+  background-color: rgba(0,139, 139,0.8);
+  padding: 60px;
+  margin: 0;
+}
