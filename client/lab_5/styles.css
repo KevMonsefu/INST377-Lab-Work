@@ -50,6 +50,5 @@ body {
 }
 .form-row input[type='text'] {
   width: 120px;
-  height: initial;
   padding: 20px;
 }
