@@ -29,7 +29,7 @@ body {
   width: 100%;
   display: inline-flex;
   background-color: rgba(248, 239, 118, 0.966);
-  padding: 40px;
+  padding: 30px;
   margin: 0;
   border: 30px solid darkslategray;
 }
