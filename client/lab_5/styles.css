@@ -15,12 +15,14 @@ body {
 /* Page Layout */
 .columns {
   display: flex;
-   flex-direction: column;
+  border-radius: 20px;
+  flex-direction: column;
   background-color: #F6F7F8;
   border: 10px solid darkslategray;
   width: 45%;
   height: 300px;
   padding: 15px;
+  justify-content: center;
 }
 
 .wrapper {
@@ -32,8 +34,8 @@ body {
   flex-wrap: wrap;
   display: flex;
   justify-content: center;
-  background-color: yellow;
   flex-direction: row;
+  align-items: center;
 }
 .title{
   width: 100%;
@@ -43,17 +45,17 @@ body {
   margin: 0;
   border: 20px solid darkslategray;
 }
-.columns input[type='text'] {
-  width: 120px;
-}
-.column-one{
-  max-width: 300px;
-  width: 100px;
-  flex: 1;
 
+.column-one{
+  justify-content: center;
+
+  max-width: 300px;
+  width: 230px;
 }
 .column-two{
-  flex:initial;
+  flex: wrap;
+  min-width: 250px;
+  height: 100px;
 }
 .legacy-form-row {
   border: none;
@@ -65,9 +67,7 @@ body {
 }
   .form-row {
     flex-direction: row;
-    align-items: flex-start; /* To avoid stretching */
-    margin-bottom: 10px;
-    padding-top:10px;
+    padding-top:15px;
   }
 .form-row button{
     font-size: 16px;
@@ -75,12 +75,9 @@ body {
 
   color: #FFFFFF;
   background-color: green;
-
   border: none;
-  border-radius: 3px;
-
-  padding: 10px 20px;
-  
+  border-radius: 5px;
+  padding: 15px 20px;
   cursor: pointer;
 }
 .columns label {
@@ -91,7 +88,7 @@ body {
 
     }
  .columns input[type='text'] {
-    width: 250px;
+    width: 170px;
     height: initial;
   }
   .legacy-form-row .radio-label {
