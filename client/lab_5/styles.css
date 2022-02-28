@@ -91,7 +91,7 @@ body {
  .columns input[type='text'] {
     width: 170px;
     height: initial;
-    border-radius: 10px;
+    border-radius: 5px;
 
   }
   .legacy-form-row .radio-label {
