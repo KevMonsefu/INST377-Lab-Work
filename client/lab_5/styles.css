@@ -9,7 +9,7 @@ body {
   padding: 0;
   font-family: ‘Segoe UI’, Candara, ‘Bitstream Vera Sans’, ‘DejaVu Sans’,
     ‘Bitsream Vera Sans’, ‘Trebuchet MS’, Verdana, ‘Verdana Ref’, sans-serif;
-  background-color: darkslategray;
+  background-color: rgb(24, 78, 177);
 }
 
 /* Page Layout */
@@ -18,7 +18,7 @@ body {
   border-radius: 20px;
   flex-direction: column;
   background-color: #F6F7F8;
-  border: 10px solid darkslategray;
+  border: 10px solid rgb(24, 78, 177);
   width: 45%;
   height: 300px;
   padding: 15px;
@@ -41,7 +41,7 @@ body {
   width: 100%;
   border-radius: 30px;
   display: inline-flex;
-  background-color: rgba(248, 239, 118, 0.966);
+  background-color: rgba(226, 105, 6, 0.966);
   padding: 20px;
   margin: 0;
   border: 20px solid darkslategray;
