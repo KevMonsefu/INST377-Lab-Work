@@ -44,7 +44,7 @@ body {
   background-color: rgba(226, 105, 6, 0.966);
   padding: 20px;
   margin: 0;
-  border: 20px solid darkslategray;
+  border: 20px solid rgb(24, 78, 177);
 }
 
 .column-one{
