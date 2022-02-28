@@ -39,7 +39,7 @@ body {
 }
 .title{
   width: 100%;
-  border-radius: 20px;
+  border-radius: 30px;
   display: inline-flex;
   background-color: rgba(248, 239, 118, 0.966);
   padding: 20px;
@@ -91,7 +91,7 @@ body {
  .columns input[type='text'] {
     width: 170px;
     height: initial;
-    border-radius: 5px;
+    border-radius: 3px;
 
   }
   .legacy-form-row .radio-label {
