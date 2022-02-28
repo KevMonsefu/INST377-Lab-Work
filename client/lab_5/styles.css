@@ -39,6 +39,7 @@ body {
 }
 .title{
   width: 100%;
+  border-radius: 20px;
   display: inline-flex;
   background-color: rgba(248, 239, 118, 0.966);
   padding: 20px;
@@ -90,6 +91,8 @@ body {
  .columns input[type='text'] {
     width: 170px;
     height: initial;
+    border-radius: 20px;
+
   }
   .legacy-form-row .radio-label {
   font-size: 14px;
