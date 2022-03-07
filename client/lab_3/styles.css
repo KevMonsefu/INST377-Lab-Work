@@ -90,6 +90,7 @@
     background-color: #D6E9FE;
     height: 200px;
     flex: 1;
+    font-weight: bold;
   }
   .footer-one,
 .footer-three {
