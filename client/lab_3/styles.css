@@ -10,6 +10,12 @@
     padding: 10px 15px;
     margin: 0;
   }
+  a:link{
+    color:white;
+  }
+  a:visited{
+    color:white;
+  }
   
   .menu-container {
     color: #fff;
