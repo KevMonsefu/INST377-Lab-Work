@@ -8,9 +8,14 @@ function dataHandeler(dataArray) {
   console.log('fired dataHandler');
   console.table(arrayFromJson); // this is called "dot notation"
   const range = [...Array(15).keys()];
-  range.forEach((item) => {
-    console.log('range item', item);
+  const listItems = range.map((item,index) => {
+    const restNum = getRandomIntInclusive(0, dataArray.length - 1);
+    return dataArray[restNum];
   });
+  console.log(listItems);
+  // range.forEach((item) => {
+  //   console.log('range item', item);
+  // });
 }
 // Ass the last step of your lab, hook this up to index.html
 async function mainEvent() { // the async keyword means we can make API requests
@@ -19,7 +24,7 @@ async function mainEvent() { // the async keyword means we can make API requests
   const submit = document.querySelector('.submit_button'); // change this selector to match the id or classname of your actual form
   submit.style.display = 'block';
 
-  const results = await fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json'); // This accesses some data from our API
+  const results = await fetch('/api/foodServicesPG'); // This accesses some data from our API
   const arrayFromJson = await results.json(); // This changes it into data we can use - an object
   console.log(arrayFromJson);
   if (arrayFromJson.data.length > 0) {
