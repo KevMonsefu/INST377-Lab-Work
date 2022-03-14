@@ -20,7 +20,7 @@ async function mainEvent() { // the async keyword means we can make API requests
 
   const results = await fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json'); // This accesses some data from our API
   const arrayFromJson = await results.json(); // This changes it into data we can use - an object
-  cconsole.log(arrayFromJson);
+  console.log(arrayFromJson);
   if (arrayFromJson.data.length > 0) {
     submit.style.display = 'block';
     form.addEventListener('submit', async (submitEvent) => { // async has to be declared all the way to get an await
