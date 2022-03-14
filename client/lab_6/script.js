@@ -5,6 +5,7 @@ function getRandomIntInclusive(min, max) {
 }
 
 function dataHandeler(dataArray) {
+  console.log('fired dataHandler');
   console.table(arrayFromJson); // this is called "dot notation"
   const range = [...Array(15).keys()];
   range.forEach((item) => {
