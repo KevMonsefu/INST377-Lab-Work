@@ -8,13 +8,14 @@ function dataHandeler(dataArray) {
   console.log('fired dataHandler');
   console.table(dataArray); // this is called "dot notation"
   const range = [...Array(15).keys()];
-  range.forEach((item) => {
-    console.log('range item', item);
-  });
-  // const listItems = range.map((item, index) => {
-  //  const restNum = getRandomIntInclusive(0, dataArray.length - 1);
-  //  return dataArray[restNum];
-  // }); 
+  const listItems = range.map((item, index) => {
+    const restNum = getRandomIntInclusive(0, dataArray.length - 1);
+    return dataArray[restNum];
+  }); 
+  console.log(listItems);
+  // range.forEach((item) => {
+  //  console.log('range item', item);
+  // });
 }
 // Ass the last step of your lab, hook this up to index.html
 async function mainEvent() { // the async keyword means we can make API requests
