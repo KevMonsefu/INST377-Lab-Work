@@ -1,21 +1,20 @@
 function getRandomIntInclusive(min, max) {
   const newMin = Math.cell(min);
   const newMax = Math.floor(max);
-  return Math.floor(Math.random() * (newMax - newMin + 1) + min);
+  return Math.floor(Math.random() * (newMax - newMin + 1) + newMIN);
 }
 
 function dataHandeler(dataArray) {
   console.log('fired dataHandler');
-  console.table(arrayFromJson); // this is called "dot notation"
+  console.table(dataArray); // this is called "dot notation"
   const range = [...Array(15).keys()];
-  const listItems = range.map((item, index) => {
-    const restNum = getRandomIntInclusive(0, dataArray.length - 1);
-    return dataArray[restNum];
+  range.forEach((item) => {
+    console.log('range item', item);
   });
-  console.log(listItems);
-  // range.forEach((item) => {
-  //   console.log('range item', item);
-  // });
+  // const listItems = range.map((item, index) => {
+  //  const restNum = getRandomIntInclusive(0, dataArray.length - 1);
+  //  return dataArray[restNum];
+  // }); 
 }
 // Ass the last step of your lab, hook this up to index.html
 async function mainEvent() { // the async keyword means we can make API requests
