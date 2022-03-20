@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'/>
+    <title>KEVIN LAB 7</title>
+    <link rel='stylesheet' href='styles.css'/>
+    
+  </head>
+  <body>
+    <h3 class='title'>KEVIN MONSEFU'S LAB 7</h3>
+    <form method='get' class='container'>
+        <div class='columns column-one'>
+            <label for='name'>First Name</label>
+            <input id='name' name='name' type='text'/>
+             <label for='category'>Food Preference</label>
+            <input id='category' food='category' type='text'/>
+             <fieldset class='legacy-form-row'>
+                <legend>Veggie or Vegan?</legend>
+                <label for='' class='radio-label'>Yes</label>
+                <input id='talk-type-1' name='veggie-vegan'  type='radio'  value='Yes' />
+                <label for='talk-type-2' class='radio-label'>No</label>
+                <input id='talk-type-2' name='veggie-vegan' type='radio'  value='No' checked />
+                <div class='form-row'>
+                  <button class = "button submit_button" type = "submit">Submit</button>
+                </div>
+            </fieldset>
+        </div>
+        <div class='columns column-two'>
+            <ul class = "resto-list"></ul>
+        </div>
+    </form>
+    <script src="script.js" charset="utf-8"></script>
+  </body>
+</html>
