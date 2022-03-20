@@ -4,18 +4,28 @@ function getRandomIntInclusive(min, max) {
   return Math.floor(Math.random() * (newMax - newMin + 1) + newMin);
 }
 
-function dataHandeler(dataArray) {
+function restoArrayMake(dataArray) {
   console.log('fired dataHandler');
-  console.table(dataArray); // this is called "dot notation"
+  // console.table(dataArray); // this is called "dot notation"
   const range = [...Array(15).keys()];
   const listItems = range.map((item, index) => {
     const restNum = getRandomIntInclusive(0, dataArray.length - 1);
     return dataArray[restNum];
-  }); 
-  console.log(listItems);
+  });
+  // console.log(listItems);
+  return listItems;
   // range.forEach((item) => {
   //  console.log('range item', item);
   // });
+}
+function createHtmlList(collection) {
+  console.log('fired html creator');
+  console.log(collection);
+  const targetList = document.querySelector('.resto-list');
+  collection.forEach((item) => {
+    const injectThisItem = '<li>${item.name}</li>';
+    targetList.innerHTML += injectThisItem;
+  });
 }
 // Ass the last step of your lab, hook this up to index.html
 async function mainEvent() { // the async keyword means we can make API requests
@@ -35,7 +45,8 @@ async function mainEvent() { // the async keyword means we can make API requests
       console.log('form submission'); // this is substituting for a "breakpoint"
       // arrayFromJson.data - we're accessing a key called 'data' on the returned object
       // it contains all 1,000 records we need
-      dataHandeler(arrayFromJson.data);
+      const restoArray = restoArrayMake(arrayFromJson.data);
+      createHtmlList(restoArray);
     });
   }
 }
