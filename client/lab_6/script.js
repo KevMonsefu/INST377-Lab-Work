@@ -23,7 +23,7 @@ function createHtmlList(collection) {
   console.log(collection);
   const targetList = document.querySelector('.resto-list');
   collection.forEach((item) => {
-    const injectThisItem = '<li>${item.name}</li>';
+    const injectThisItem = `<li>${item.name}</li>`;
     targetList.innerHTML += injectThisItem;
   });
 }
