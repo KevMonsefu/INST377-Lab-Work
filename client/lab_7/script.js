@@ -5,7 +5,7 @@ function getRandomIntInclusive(min, max) {
 }
 
 function restoArrayMake(dataArray) {
-  console.log('fired dataHandler');
+  // console.log('fired dataHandler');
   // console.table(dataArray); // this is called "dot notation"
   const range = [...Array(15).keys()];
   const listItems = range.map((item, index) => {
@@ -18,9 +18,10 @@ function restoArrayMake(dataArray) {
   //  console.log('range item', item);
   // });
 }
+
 function createHtmlList(collection) {
-  console.log('fired html creator');
-  console.table(collection);
+  // console.log('fired html creator');
+  // console.table(collection);
   const targetList = document.querySelector('.resto-list');
   targetList.innerHTML = '';
   collection.forEach((item) => {
@@ -30,22 +31,40 @@ function createHtmlList(collection) {
     targetList.innerHTML += injectThisItem;
   });
 }
+
 // Ass the last step of your lab, hook this up to index.html
 async function mainEvent() { // the async keyword means we can make API requests
   console.log('script loaded');
   const form = document.querySelector('.container'); // change this selector to match the id or classname of your actual form
   const submit = document.querySelector('.submit_button'); // change this selector to match the id or classname of your actual form
+
+  const resto = document.querySelector('#resto_name');
+  const zipcode = document.querySelector('#zipcode');
   submit.style.display = 'none';
 
   const results = await fetch('/api/foodServicesPG'); // This accesses some data from our API
   const arrayFromJson = await results.json(); // This changes it into data we can use - an object
-  console.log(arrayFromJson);
+  // console.log(arrayFromJson);
+
   if (arrayFromJson.data.length > 0) {
-    console.log('I made it here');
+    // console.log('I made it here');
     submit.style.display = 'block';
+
+    const currentArray = [];
+    resto.addEventListener('input', async (event) => {
+      if (currentArray === undefined) { return; }
+      console.log(event.target.value);
+      currentArray.filter((item) => {
+        console.log(item);
+        console.log(item.name);
+        return item.name.includes(event.target.value);
+      });
+      // console.log(matchResto);
+    });
+
     form.addEventListener('submit', async (submitEvent) => { // async has to be declared all the way to get an await
       submitEvent.preventDefault(); // This prevents your page from refreshing!
-      console.log('form submission'); // this is substituting for a "breakpoint"
+      // console.log('form submission'); // this is substituting for a "breakpoint"
       // arrayFromJson.data - we're accessing a key called 'data' on the returned object
       // it contains all 1,000 records we need
       const restoArray = restoArrayMake(arrayFromJson.data);
