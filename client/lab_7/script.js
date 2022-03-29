@@ -62,7 +62,7 @@ async function mainEvent() { // the async keyword means we can make API requests
       const selectResto = currentArray.filter((item) => {
         const lowerName = item.name.toLowerCase();
         const lowerValue = event.target.value.toLowerCase();
-        return item.name.includes(event.target.value);
+        return lowerName.includes(lowerValue);
       });
 
       createHtmlList(selectResto);
