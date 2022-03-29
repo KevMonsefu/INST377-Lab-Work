@@ -73,7 +73,7 @@ async function mainEvent() { // the async keyword means we can make API requests
       if (currentArray.length < 1) {
         return;
       }
-      const selectZip = currentArray.filter((item) => item.name.includes(event.target.value));
+      const selectZip = currentArray.filter((item) => item.zip.includes(event.target.value));
       createHtmlList(selectZip);
     });
 
