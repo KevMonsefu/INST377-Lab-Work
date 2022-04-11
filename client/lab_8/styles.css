@@ -12,6 +12,8 @@
     background-color: rgb(24, 78, 177);
   }
   
+  #map { height: 180px; }
+
   /* Page Layout */
   .columns {
     display: flex;
