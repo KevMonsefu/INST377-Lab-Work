@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: ‘Segoe UI’, Candara, ‘Bitstream Vera Sans’, ‘DejaVu Sans’,
+      ‘Bitsream Vera Sans’, ‘Trebuchet MS’, Verdana, ‘Verdana Ref’, sans-serif;
+    background-color: rgb(24, 78, 177);
+  }
+  
+  /* Page Layout */
+  .columns {
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column;
+    background-color: #F6F7F8;
+    width: 45%;
+    height: fit-content;
+    padding: 20px;
+    justify-content: center;
+    margin: 10px;
+  }
+  
+  .wrapper {
+    display: flex;
+  }
+  .container {
+    max-width: 100%;
+    height: 300px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+  }
+  .title{
+    width: 100%;
+    border-radius: 30px;
+    display: inline-flex;
+    background-color: rgba(226, 105, 6, 0.966);
+    padding: 20px;
+    margin: 0;
+    border: 20px solid rgb(24, 78, 177);
+  }
+  
+  .column-one{
+    justify-content: center;
+  
+    max-width: 300px;
+    width: 230px;
+  }
+  .column-two{
+    flex: wrap;
+    min-width: 250px;
+  }
+  .legacy-form-row {
+    border: none;
+    margin-bottom: 40px;
+  }
+  .legacy-form-row legend {
+    margin-bottom: 15px;
+    padding-top: 10px;
+  }
+    .form-row {
+      flex-direction: row;
+      padding-top:15px;
+    }
+  .form-row button{
+      font-size: 16px;
+    font-weight: bold;
+  
+    color: #FFFFFF;
+    background-color: green;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 20px;
+    cursor: pointer;
+  }
+  .columns label {
+      text-align: left;
+      width: 150px;
+      padding-bottom: 10px;
+      padding-top: 10px;
+  
+      }
+   .columns input[type='text'] {
+      width: 170px;
+      height: initial;
+      border-radius: 3px;
+  
+    }
+    .legacy-form-row .radio-label {
+    font-size: 14px;
+  }
+
+  .submiit_button {
+      display: none;
+  }
+  
+  .resto-list {
+    list-style-type: none;
+   }
