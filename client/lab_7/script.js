@@ -69,7 +69,7 @@ async function mainEvent() { // the async keyword means we can make API requests
       // console.log(matchResto);
     });
 
-    zipcode.addEventListener('input', async (event) =>{
+    zipcode.addEventListener('input', async (event) => {
       if (currentArray.length < 1) {
         return;
       }
