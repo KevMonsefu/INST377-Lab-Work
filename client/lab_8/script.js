@@ -12,7 +12,7 @@ function restoArrayMake(dataArray) {
     const restNum = getRandomIntInclusive(0, dataArray.length - 1);
     return dataArray[restNum];
   });
-  // console.log(listItems);
+    // console.log(listItems);
   return listItems;
   // range.forEach((item) => {
   //  console.log('range item', item);
@@ -59,7 +59,7 @@ async function mainEvent() { // the async keyword means we can make API requests
         return;
       }
 
-      const selectResto = currentArray.filter((item) => {
+      const selectResto = arrayFromJson.data.filter((item) => {
         const lowerName = item.name.toLowerCase();
         const lowerValue = event.target.value.toLowerCase();
         return lowerName.includes(lowerValue);
