@@ -55,9 +55,9 @@ async function mainEvent() { // the async keyword means we can make API requests
     resto.addEventListener('input', async (event) => {
       console.log(event.target.value);
 
-      if (currentArray.length < 1) {
-        return;
-      }
+      //  if (currentArray.length < 1) {
+      //    return;
+      //  }
 
       const selectResto = currentArray.filter((item) => {
         const lowerName = item.name.toLowerCase();
