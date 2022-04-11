@@ -101,6 +101,6 @@
       display: none;
   }
   
-  #resto-list.column-two {
+  .resto-list {
     list-style-type: none;
    }
