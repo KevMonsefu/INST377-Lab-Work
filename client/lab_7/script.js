@@ -59,7 +59,7 @@ async function mainEvent() { // the async keyword means we can make API requests
       //    return;
       //  }
 
-      const selectResto = currentArray.filter((item) => {
+      const selectResto = arrayFromJson.filter((item) => {
         const lowerName = item.name.toLowerCase();
         const lowerValue = event.target.value.toLowerCase();
         return lowerName.includes(lowerValue);
