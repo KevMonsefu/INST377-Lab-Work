@@ -3,7 +3,7 @@ function getRandomIntInclusive(min, max) {
   const newMax = Math.floor(max);
   return Math.floor(Math.random() * (newMax - newMin + 1) + newMin);
 }
-  
+
 function restoArrayMake(dataArray) {
   // console.log('fired dataHandler');
   // console.table(dataArray); // this is called "dot notation"
@@ -18,7 +18,7 @@ function restoArrayMake(dataArray) {
   //  console.log('range item', item);
   // });
 }
-  
+
 function createHtmlList(collection) {
   // console.log('fired html creator');
   // console.table(collection);
@@ -31,44 +31,44 @@ function createHtmlList(collection) {
     targetList.innerHTML += injectThisItem;
   });
 }
-  
+
 // Ass the last step of your lab, hook this up to index.html
 async function mainEvent() { // the async keyword means we can make API requests
   console.log('script loaded');
   const form = document.querySelector('.container'); // change this selector to match the id or classname of your actual form
   const submit = document.querySelector('.submit_button'); // change this selector to match the id or classname of your actual form
-  
+
   const resto = document.querySelector('#resto_name');
   const zipcode = document.querySelector('#zipcode');
   submit.style.display = 'none';
-  
+
   const results = await fetch('/api/foodServicesPG'); // This accesses some data from our API
   const arrayFromJson = await results.json(); // This changes it into data we can use - an object
   // console.log(arrayFromJson);
-  
+
   // prevents a race condition on data load
   if (arrayFromJson.data.length > 0) {
     // console.log('I made it here');
     submit.style.display = 'block';
-  
+
     let currentArray = [];
     resto.addEventListener('input', async (event) => {
       console.log(event.target.value);
-  
+
       if (currentArray.length < 1) {
         return;
       }
-  
+
       const selectResto = currentArray.filter((item) => {
         const lowerName = item.name.toLowerCase();
         const lowerValue = event.target.value.toLowerCase();
         return lowerName.includes(lowerValue);
       });
-  
+
       createHtmlList(selectResto);
       // console.log(matchResto);
     });
-  
+
     zipcode.addEventListener('input', async (event) => {
       if (currentArray.length < 1) {
         return;
@@ -76,7 +76,7 @@ async function mainEvent() { // the async keyword means we can make API requests
       const selectZip = currentArray.filter((item) => item.zip.includes(event.target.value));
       createHtmlList(selectZip);
     });
-  
+
     form.addEventListener('submit', async (submitEvent) => { // async has to be declared all the way to get an await
       submitEvent.preventDefault(); // This prevents your page from refreshing!
       // console.log('form submission'); // this is substituting for a "breakpoint"
@@ -88,6 +88,6 @@ async function mainEvent() { // the async keyword means we can make API requests
     });
   }
 }
-  
+
 // this actually runs first! It's calling the function above
 document.addEventListener('DOMContentLoaded', async () => mainEvent()); // the async keyword means we can make API requests
