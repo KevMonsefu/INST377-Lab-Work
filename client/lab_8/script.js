@@ -65,7 +65,7 @@ async function mainEvent() { // the async keyword means we can make API requests
 
   const storedData = localStorage.getItem(retrievalVar);
   // const storedDataArray = JSON.parse(storedData);
-  console.log(storedDataArray);
+  console.log(storedData);
   // const arrayFromJson = {data: []}; // DEBUG tool TODO
 
   // prevents a race condition on data load
