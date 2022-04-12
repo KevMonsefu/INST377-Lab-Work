@@ -69,7 +69,7 @@ async function mainEvent() { // the async keyword means we can make API requests
   // const arrayFromJson = {data: []}; // DEBUG tool TODO
 
   // prevents a race condition on data load
-  if (storedData.data.length > 0) {
+  if (storedData.length > 0) {
     // console.log('I made it here');
     submit.style.display = 'block';
 
