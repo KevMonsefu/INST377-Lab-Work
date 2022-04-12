@@ -58,10 +58,10 @@ async function mainEvent() { // the async keyword means we can make API requests
   const retrievalVar = 'restaurants';
   submit.style.display = 'none';
 
-  const results = await fetch('/api/foodServicesPG'); // This accesses some data from our API
-  const arrayFromJson = await results.json(); // This changes it into data we can use - an object
-  console.log(arrayFromJson);
-  localStorage.setItem(retrievalVar, JSON.stringify(arrayFromJson));
+  // const results = await fetch('/api/foodServicesPG'); // This accesses some data from our API
+  // const arrayFromJson = await results.json(); // This changes it into data we can use - an object
+  // console.log(arrayFromJson);
+  // localStorage.setItem(retrievalVar, JSON.stringify(arrayFromJson));
 
   const storedData = localStorage.getItem(retrievalVar);
   // const storedDataArray = JSON.parse(storedData);
@@ -69,7 +69,7 @@ async function mainEvent() { // the async keyword means we can make API requests
   // const arrayFromJson = {data: []}; // DEBUG tool TODO
 
   // prevents a race condition on data load
-  if (arrayFromJson.data.length > 0) {
+  if (storedData.data.length > 0) {
     // console.log('I made it here');
     submit.style.display = 'block';
 
