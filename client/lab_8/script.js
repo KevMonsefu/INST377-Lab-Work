@@ -32,8 +32,9 @@ function createHtmlList(collection) {
   });
 }
 
-function initMap() {
-  const map = L.map('map').setView([51.505, -0.09], 13);
+function initMap(targetId) {
+  // const latLong = [38.7849, 76.872];
+  const map = L.map(targetId).setView([51.505, -0.09], 13);
   L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
@@ -54,12 +55,18 @@ async function mainEvent() { // the async keyword means we can make API requests
   const resto = document.querySelector('#resto_name');
   const zipcode = document.querySelector('#zipcode');
   const map = initMap('map');
+  const retrievalVar = 'restaurants';
   submit.style.display = 'none';
 
-  // const results = await fetch('/api/foodServicesPG'); // This accesses some data from our API
-  // const arrayFromJson = await results.json(); // This changes it into data we can use - an object
-  // console.log(arrayFromJson);
-  const arrayFromJson = {data: []}; // DEBUG tool TODO
+  const results = await fetch('/api/foodServicesPG'); // This accesses some data from our API
+  const arrayFromJson = await results.json(); // This changes it into data we can use - an object
+  console.log(arrayFromJson);
+  localStorage.setItem(retrievalVar, JSON.stringify(arrayFromJson));
+
+  const storedData = localStorage.getItem(retrievalVar);
+  // const storedDataArray = JSON.parse(storedData);
+  console.log(storedDataArray);
+  // const arrayFromJson = {data: []}; // DEBUG tool TODO
 
   // prevents a race condition on data load
   if (arrayFromJson.data.length > 0) {
