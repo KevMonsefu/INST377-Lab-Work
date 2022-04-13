@@ -47,6 +47,12 @@ function initMap(targetId) {
 }
 
 function addMapMarkers(map, collection) {
+  map.eachLayer((layer) => {
+    if (layer instanceof L.Marker) {
+      layer.remove();
+    }
+  });
+
   collection.forEach((item) => {
     const point = item.geocoded_column_1?.coordinates;
     console.log(item.geocoded_column_1?.coordinates);
@@ -66,12 +72,12 @@ async function mainEvent() { // the async keyword means we can make API requests
   const retrievalVar = 'restaurants';
   submit.style.display = 'none';
 
-  if (localStorage.getItem(retrievalVar) === undefined) {
-    const results = await fetch('/api/foodServicesPG'); // This accesses some data from our API
-    const arrayFromJson = await results.json(); // This changes it into data we can use - an object
-    console.log(arrayFromJson);
-    localStorage.setItem(retrievalVar, JSON.stringify(arrayFromJson.data));
-  }
+  // if (localStorage.getItem(retrievalVar) === undefined) {
+  const results = await fetch('/api/foodServicesPG'); // This accesses some data from our API
+  const arrayFromJson = await results.json(); // This changes it into data we can use - an object
+  console.log(arrayFromJson);
+  localStorage.setItem(retrievalVar, JSON.stringify(arrayFromJson.data));
+  // }
 
   const storedDataString = localStorage.getItem(retrievalVar);
   const storedDataArray = JSON.parse(storedDataString);
